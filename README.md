@@ -12,3 +12,11 @@ To make it easier for anyone to track changes, I have maintained the folder stru
 I hope that the work I have done in these last weeks helps the community create an improved version.
 
 **Remember that the initial objective is to make a success build and to have the resulting .BIN that boot on the board. From here, all hardware components must be tested to verify what other changes need to be made.**
+
+To quickly test the .BIN files, they can be found in :
+
+- [bootloader.bin](make/esp32s3idf4/build/bootloader/bootloader.bin)
+
+- [partition-table.bin](make/esp32s3idf4/build/partition_table/partition-table.bin)
+
+- [espruino.bin](make/esp32s3idf4/build/espruino.bin)
