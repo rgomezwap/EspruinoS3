@@ -20,3 +20,42 @@ To quickly test the .BIN files, they can be found in :
 - [partition-table.bin](make/esp32s3idf4/build/partition_table/partition-table.bin)
 
 - [espruino.bin](make/esp32s3idf4/build/espruino.bin)
+
+
+Building
+--------
+
+Personally, I am working on **Linux Ubuntu Desktop 20.04 LTS** on a virtual machine.
+
+First, we have to install the ESP-IDF 4.x BUILD system, which is explained very well in the following [link](https://docs.espressif.com/projects/esp-idf/en/v4.4.4/esp32s3/get-started/linux-setup.html)
+
+I have installed the three compilation systems to have them ready:
+
+`$ ./install.sh esp32`
+
+`$ ./install.sh esp32s2`
+
+`$ ./install.sh esp32s3`
+
+Now we are going to clone the EspruinoS3 repository.
+
+`$ git clone https://github.com/rgomezwap/EspruinoS3.git`
+
+Whenever we start a new work session, we have to activate the ESP-IDF environment with: `$ . $HOME/esp/esp-idf/export.sh`
+
+And now we'll BUILD to generate the binaries: **bootloader**, **partitions**, and **Espruino**.
+
+`$ cd ~/EspruinoS3/make/esp32s3idf4/`
+
+`$ rm -r build/`
+
+`$ idf.py set-target esp32s3`
+
+`$ mv sdkconfig.old sdkconfig`
+
+`$ idf.py fullclean`
+
+`$ idf.py build`
+
+And if nothing fails, we already have it.
+
